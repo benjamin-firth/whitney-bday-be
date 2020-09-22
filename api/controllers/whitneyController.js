@@ -7,25 +7,33 @@ exports.initial_get = async (req, res, next) => {
   try {
     res.status(200).send("Hi, It works!");
   } catch (err) {
-    next(err)
-  }
+    next(err);
+  };
 };
 
-exports.list_all_counts = function(req, res) {
-  Count.find({}, function(err, count) {
-    if (err)
-      res.send(err);
-    res.json(count);
-  });
+exports.list_all_counts = async (req, res, next) => {
+  try {
+    Count.find({}, function(err, count) {
+      if (err)
+        res.send(err);
+      res.json(count);
+    });
+  } catch (err) {
+    next(err);
+  };
 };
 
-exports.create_a_count = function(req, res) {
-  var new_count = new Count(req.body);
-  new_count.save(function(err, count) {
-    if (err)
-      res.send(err);
-    res.json(count);
-  });
+exports.create_a_count = async (req, res, next) => {
+  try {
+    var new_count = new Count(req.body);
+    new_count.save(function(err, count) {
+      if (err)
+        res.send(err);
+      res.json(count);
+    });
+  } catch (err) {
+    next(err);
+  };
 };
 
 // exports.update_a_task = function(req, res) {
