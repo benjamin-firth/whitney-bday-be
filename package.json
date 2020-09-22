@@ -1,0 +1,8 @@
+{
+  "name": "whitney-be",
+  "version": "1.0.0",
+  "description": "bday population",
+  "main": "index.js",
+  "author": "Benjamin Firth",
+  "license": "ISC"
+}
