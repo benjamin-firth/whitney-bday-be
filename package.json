@@ -8,5 +8,11 @@
     "url": "git+https://github.com/benjamin-firth/whitney-bday-be"
   },
   "author": "Benjamin Firth",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
