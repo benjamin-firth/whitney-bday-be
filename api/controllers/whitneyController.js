@@ -3,8 +3,12 @@
 var mongoose = require('mongoose'),
   Count = mongoose.model('Counts');
 
-exports.initial_get = function(req, res) {
-  res.status(200).send("Hi, It works!");
+exports.initial_get = async (req, res, next) => {
+  try {
+    res.status(200).send("Hi, It works!");
+  } catch (err) {
+    next(err)
+  }
 };
 
 exports.list_all_counts = function(req, res) {
