@@ -3,6 +3,10 @@
 var mongoose = require('mongoose'),
   Count = mongoose.model('Counts');
 
+exports.initial_get = function(req, res) {
+  res.status(200).send("Hi, It works!");
+};
+
 exports.list_all_counts = function(req, res) {
   Count.find({}, function(err, count) {
     if (err)
