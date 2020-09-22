@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "bday population",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "author": "Benjamin Firth",
   "license": "ISC"
 }
