@@ -13,7 +13,9 @@ app.locals.count = [
 ];
 
 app.get('/', (request, response) => {
-  response.send('Oh hey Pet Box');
+  const count = app.locals.count;
+
+  response.json({ count });
 });
 
 app.get('/count', (request, response) => {
