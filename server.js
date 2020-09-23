@@ -6,7 +6,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.set('port', process.env.PORT || 3000);
+const PORT = process.env.PORT || '3000';
+
+app.set('port', PORT);
 
 
 app.locals.title = 'Whitneys Birthday';
